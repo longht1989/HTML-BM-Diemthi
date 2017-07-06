@@ -1,0 +1,32 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 20px;
+    &__title {
+        @include font-size(18, 35);
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 10px;
+        a {
+            @extend .link-primary;
+        }
+        @include breakpoint(md) {
+            @include font-size(20, 35);
+        }
+    }
+    &__content {
+        @include clearfix();
+    }
+    .note {
+        padding: 15px;
+        margin-top: 10px;
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}

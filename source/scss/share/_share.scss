@@ -1,0 +1,108 @@
+/* button border  */
+
+.btn {
+    font-size: 14px;
+    @include transition(background-color, 0.2, ease-out);
+    border: none;
+    .fa {
+        margin-right: 5px;
+    }
+    &:active:focus,
+    &:focus:active {
+        outline: none;
+        border: none;
+    }
+    @include haf {
+        border: none;
+        outline: none;
+    }
+}
+
+.btn-border {
+    border: 1px solid #555;
+    background-color: transparent;
+    color: #555;
+    @include transition(all, 0.2, ease-out);
+    @include haf() {
+        background-color: #111;
+        color: white;
+    }
+}
+
+.form-control {
+    &:focus {
+        border-color: darken($brand-primary, 15%);
+    }
+}
+
+
+/* table */
+
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border-bottom-width: 1px;
+}
+
+
+/* result */
+
+.result {
+    &__location {
+        margin-bottom: 20px;
+        @include font-size(18, 26);
+        strong {
+            padding: 5px;
+        }
+    }
+    &-table {
+        .note {
+            margin-top: 5px;
+            padding: 0;
+        }
+    }
+}
+
+.table-responsive {
+    padding: 8px;
+    background: #f0f0f0;
+    margin-bottom: 5px;
+    .table {
+        margin-bottom: 0;
+        td,
+        th {
+            white-space: nowrap;
+        }
+    }
+    @include breakpoint(xs) {
+        .table {
+            border: 1px solid #ddd;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.user-name {
+    text-transform: capitalize;
+}
